@@ -1,0 +1,19 @@
+<!-- feedback/templates/feedback_submitted.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Feedback</title>
+    </head>
+    <body>
+        <h1>Congratulations! Your feedback has been submitted.</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </form>
+        <p>Click on the link below to go back to Home or click on Explore to explore other apps</p>
+        <a href="/">Home</a>
+        <br>
+        <a href="/explore">Explore</a>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!-- feedback/templates/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Feedback</title>
+    </head>
+    <body>
+        <h1>Welcome to the simple Feedback form powered by Django!</h1>
+        <p>Fill up the form below and click on the Submit button</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
